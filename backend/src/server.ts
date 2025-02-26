@@ -9,14 +9,12 @@ app.use(bodyParser.json());
 
 const db = new sqlite3.Database("mydatabase.db", (err) => {
   if (err) console.error("❌ Error connecting to SQLite:", err);
-  else console.log("✅ SQLite database connected successfully!");
 });
 
 db.serialize(() => {
   db.run(
     "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)"
   );
-  console.log("✅ 'users' table verified/created successfully.");
 });
 
 app.post("/users", (req, res) => {
