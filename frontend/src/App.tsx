@@ -30,9 +30,9 @@ const App: React.FC = () => {
     }
   };
 
-  const editUser = async (id: number) => {
-    const newName = prompt("Edite o nome do usuário: ");
-    if (newName) {
+  const editUser = async (id: number, currentName: string) => {
+    const newName = prompt("Edite o nome do usuário:", currentName);
+    if (newName && newName !== currentName) {
       try {
         await axios.put(`http://localhost:3000/users/${id}`, { name: newName });
         fetchUsers();
@@ -93,7 +93,7 @@ const App: React.FC = () => {
                 {user.name}
                 <div className="button-container">
                   <button
-                    onClick={() => editUser(user.id)}
+                    onClick={() => editUser(user.id, user.name)}
                     className="edit-button"
                   >
                     ✏️
