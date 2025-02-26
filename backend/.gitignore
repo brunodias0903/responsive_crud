@@ -1,3 +1,4 @@
 dist
 node_modules
 mydatabase.db
+package-lock.json
