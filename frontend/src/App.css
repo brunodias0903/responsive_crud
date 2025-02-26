@@ -1,0 +1,174 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 24px calc(100vh - 300px);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 65%;
+}
+
+.add-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 35%;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+.user-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 600px;
+  gap: 12px;
+  padding: 12px;
+}
+
+.user-list {
+  list-style-type: none;
+  padding: 12px;
+  background-color: #00bcd4;
+  border-radius: 5px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  color: #007bff;
+}
+
+.delete-button:hover {
+  color: #ff0000;
+}
+
+.no-users-message {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .input-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .add-button {
+    width: 100%;
+  }
+
+  .user-list-container {
+    max-width: 100%;
+  }
+
+  .user-list {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .user-item {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .edit-button,
+  .delete-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .add-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .user-item {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  .edit-button,
+  .delete-button {
+    font-size: 1rem;
+  }
+}
