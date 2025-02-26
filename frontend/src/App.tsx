@@ -68,6 +68,7 @@ const App: React.FC = () => {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && addUser()}
           placeholder="Digite o nome do usuário"
           className="input"
         />
